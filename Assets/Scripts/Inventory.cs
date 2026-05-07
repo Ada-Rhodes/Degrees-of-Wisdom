@@ -1,0 +1,23 @@
+using UnityEngine;
+
+public class Inventory : MonoBehaviour
+{
+    public bool bindle;
+    public bool coin;
+    public bool cup;
+    public bool flower; 
+    public bool sword;
+    public bool wand;     
+    
+    // Start is called once before the first execution of Update after the MonoBehaviour is created
+    void Start()
+    {
+        
+    }
+
+    // Update is called once per frame
+    void Update()
+    {
+        
+    }
+}
