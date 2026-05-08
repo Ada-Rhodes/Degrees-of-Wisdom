@@ -2,6 +2,7 @@ using UnityEngine;
 
 public class Flower_Pickup : MonoBehaviour
 {
+    public GameObject checkPoint;
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
@@ -14,15 +15,17 @@ public class Flower_Pickup : MonoBehaviour
         
     }
 
-    void OnTriggerEnter2D(Collider2D col)
+    void OnTriggerEnter2D(Collider2D collision)
     {
         Debug.Log("touch");
-        if (col.gameObject.name == "Fool")
+        if (collision.gameObject.name == "Fool")
         {
             // give fool the bindle 
-            col.gameObject.GetComponent<Inventory>().flower=true;
+            collision.gameObject.GetComponent<Inventory>().flower=true;
+            Quest_Items.instance.SoundDadada();
+            collision.gameObject.GetComponent<Status>().checkPoint = checkPoint;
             gameObject.SetActive(false);
-            col.gameObject.GetComponent<Player_Controls>().jumps=2;
+            collision.gameObject.GetComponent<Player_Controls>().jumps=2;
             Debug.Log("the fool has the flower PLAY DOUBLE JUMP ANIMATION HERE");
         }
         

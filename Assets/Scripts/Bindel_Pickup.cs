@@ -22,6 +22,8 @@ public class Bindel_Pickup : MonoBehaviour
         if (col.gameObject.name == "Fool")
         {
             // give fool the bindle 
+            Quest_Items.instance.SoundDadada();
+            Debug.Log("Sound not playing because the object deactivates before it can play, need a separate parent object with all important items");
             col.gameObject.GetComponent<Inventory>().bindle=true;
             gameObject.SetActive(false);
             bindelPanel.SetActive(true);

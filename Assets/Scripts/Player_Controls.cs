@@ -65,20 +65,12 @@ public class Player_Controls : MonoBehaviour
         {
             if (jumps > jumpStack)
             {
-                if (jumpTimer > 0)
-                {
-                    Debug.Log("Jump Cooling Down" + jumpTimer);
-                }
-                else
-                {
-                    // do jump 
-                    rb.AddForce(Vector2.up * jumpHeight, ForceMode2D.Impulse);
-                    jumpTimer = jumpCooldown;
-                    jumpSound.pitch = Mathf.Pow(1.2f, jumpStack);
-                    jumpSound.Play();
-                    jumpStack+=1;
-                    
-                }
+                // do jump 
+                rb.AddForce(Vector2.up * jumpHeight, ForceMode2D.Impulse);
+                jumpTimer = jumpCooldown;
+                jumpSound.pitch = Mathf.Pow(1.2f, jumpStack);
+                jumpSound.Play();
+                jumpStack+=1;
             } else Debug.Log("Can not do more than " + jumps + " jumps");
             
         }

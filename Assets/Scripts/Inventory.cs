@@ -2,6 +2,7 @@ using UnityEngine;
 
 public class Inventory : MonoBehaviour
 {
+    [Header("Items")]
     public bool bindle;
     public bool coin;
     public bool cup;
