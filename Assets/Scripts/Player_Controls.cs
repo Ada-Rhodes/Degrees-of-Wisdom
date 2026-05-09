@@ -1,9 +1,11 @@
+using TMPro;
 using Unity.Mathematics;
 using UnityEngine;
 using UnityEngine.InputSystem;
 
 public class Player_Controls : MonoBehaviour
 {
+    [SerializeField] private Animator _animator;
     AudioSource jumpSound; 
     private int jumpStack;
     private float jumpTimer;
@@ -43,7 +45,16 @@ public class Player_Controls : MonoBehaviour
     void FixedUpdate()
     {
         Vector2 move = new Vector2(moveInput.x, 0);
-        transform.Translate(move*speed);        
+        transform.Translate(move*speed);       
+        if (move.x != 0)
+        {
+            _animator.SetBool("isRunning", true);
+        } 
+        else _animator.SetBool("isRunning", false);
+        if (rb.linearVelocityY != 0)
+        {
+            _animator.SetBool("isJumping", true);
+        } else _animator.SetBool("isJumping", false);
     }
 
     public void OnJump()
@@ -90,6 +101,6 @@ public class Player_Controls : MonoBehaviour
         } else if (moveInput.x > 0)
         {
             GetComponent<SpriteRenderer>().flipX=false;
-        }
+        } 
     }
 }

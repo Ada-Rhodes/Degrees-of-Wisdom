@@ -13,7 +13,6 @@ GameObject:
   - component: {fileID: 6402919265270135604}
   - component: {fileID: 5241767590767769042}
   - component: {fileID: 1169183349281726567}
-  - component: {fileID: 782044939883488157}
   m_Layer: 5
   m_Name: Deadly Rocks
   m_TagString: Untagged
@@ -30,7 +29,7 @@ RectTransform:
   m_GameObject: {fileID: 3156972630035974317}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 30, y: 0.25, z: 1}
+  m_LocalScale: {x: 1, y: 0.25, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
@@ -255,16 +254,3 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
---- !u!114 &782044939883488157
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3156972630035974317}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d4e6dd4f7108d074082868e16f942d80, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::Fall_Death
-  checkPoint: {fileID: 0}

@@ -8,7 +8,8 @@ public class Inventory : MonoBehaviour
     public bool cup;
     public bool flower; 
     public bool sword;
-    public bool wand;     
+    public int tarotCards=0; 
+    public bool wand;
     
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()

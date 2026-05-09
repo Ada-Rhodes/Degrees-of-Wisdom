@@ -3,6 +3,7 @@ using UnityEngine;
 public class Flower_Pickup : MonoBehaviour
 {
     public GameObject checkPoint;
+    public GameObject southButtonPanel;
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
@@ -26,6 +27,7 @@ public class Flower_Pickup : MonoBehaviour
             collision.gameObject.GetComponent<Status>().checkPoint = checkPoint;
             gameObject.SetActive(false);
             collision.gameObject.GetComponent<Player_Controls>().jumps=2;
+            southButtonPanel.SetActive(true);
             Debug.Log("the fool has the flower PLAY DOUBLE JUMP ANIMATION HERE");
         }
         
