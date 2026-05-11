@@ -4,7 +4,7 @@ public class Inventory : MonoBehaviour
 {
     [Header("Items")]
     public bool bindle;
-    public bool coin;
+    public int coins=0;
     public bool cup;
     public bool flower; 
     public bool sword;
