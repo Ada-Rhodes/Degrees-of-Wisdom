@@ -67,6 +67,6 @@
         "*.sln": "*.csproj",
         "*.slnx": "*.csproj"
     },
-    "dotnet.defaultSolution": "Degrees-of-Wisdom.slnx",
+    "dotnet.defaultSolution": "Degrees of Wisdom.slnx",
     "dotnet.enableWorkspaceBasedDevelopment": false
 }
