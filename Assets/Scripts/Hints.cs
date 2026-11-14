@@ -39,7 +39,7 @@ public class Hints : MonoBehaviour
                 hintText.text = "Use D-Pad, Left-Stick, or WASD to MOVE";
             break;
             case 2: 
-                hintText.text = "Press the bottom button to JUMP";
+                hintText.text = "Press A to JUMP";
             break;
             case 3:
                 hintText.text = "The bindel lets you store items you pick up";
@@ -57,7 +57,7 @@ public class Hints : MonoBehaviour
                 hintText.text = "You are The Fool, seek wisdom at the mountains peak";
             break;
             case 8:
-                hintText.text = "OooOOOooo, a shiny coin";
+                hintText.text = "Level Completed";
             break;
             case 9:
                 hintText.text = "Leap towards the wisdom that lies below";
